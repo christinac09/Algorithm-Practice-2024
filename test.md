@@ -2,7 +2,7 @@
 
 ### 2. Is an Algorithm
 
-This function chooses a random opponent choice, then takes that and the user's choice to determine who won. It has a for loop (iteration) that iterates over a random range of numbers, while i is less than the random integer, to randomly choose the opponent's choice. The if statement (selection) that runs after it selects the outcome by seeing which condition the opponent's choice meets. This was done in a series of steps (sequencing), therefore it is an algorithm.
+This function chooses a random opponent choice, then takes that and the user's choice to determine who won. It has a for loop (iteration) that iterates over a random range of numbers, while i is less than the random integer, to randomly choose the opponent's choice. The if statement (selection) that runs after it assigns an outcome by seeing comparing the user's and opponent's choice. This was done in a series of steps (sequencing), therefore it is an algorithm.
 
 ```javascript
 function rockPaperScissors(input) {
