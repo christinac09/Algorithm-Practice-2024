@@ -1,12 +1,12 @@
 function binaryToDecimal(binaryInput) {
-    const binaryArray = Array.from(binaryInput)
+    const binaryStr = binaryInput.toString()
     let decimalValue = 0
-    length = binaryArray.length
+    length = binaryStr.length
     for (i=0;i<length;i++) {
-        decimalValue += (binaryArray[i] * 2**(length-1))
-        length-=1
+        let currentPowerOfTwo = 2**(length-(i+1))  // bc base two starts with 2^0, i+1 starts at 1
+        decimalValue += (parseInt(binaryStr[i]) * currentPowerOfTwo)
     }
     return decimalValue
 }
 
-console.log(decimalValue)
+console.log(binaryToDecimal("101"))
