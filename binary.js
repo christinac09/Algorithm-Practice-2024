@@ -3,8 +3,8 @@ function binaryToDecimal(binaryInput) {
   let decimalValue = 0;
   length = binaryStr.length;
   for (i = 0; i < length; i++) {
-    let currentPowerOfTwo = 2 ** (length - (i + 1)); // bc base two starts with 2^0, i+1 starts at 1
-    decimalValue += Number(binaryStr[i]) * currentPowerOfTwo;
+    let currentPower = 2 ** (length - (i + 1)); // bc base two starts with 2^0, i+1 starts at 1
+    decimalValue += Number(binaryStr[i]) * currentPower;
   }
   return decimalValue;
 }
@@ -14,12 +14,11 @@ console.log(binaryToDecimal("101"));
 function decimalToBinary(decimalInput) {
   runningDecimalValue = Number(decimalInput);
   let binaryValue = "";
-  exponentCounter = 7;
   for (i = 7; i >= 0; i--) {
-    currentPowerOfTwo = 2 ** i;
-    quotient = Math.floor(decimalInput / currentPowerOfTwo);
+    currentPower = 2 ** i;
+    quotient = Math.floor(decimalInput / currentPower);
     console.log(quotient);
-    remainder = runningDecimalValue % currentPowerOfTwo;
+    remainder = runningDecimalValue % currentPower;
     /* if (quotient != 0) {
         digit = "1"
     } else {
