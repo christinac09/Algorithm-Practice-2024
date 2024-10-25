@@ -9,8 +9,18 @@ function binaryToDecimal(binaryInput) {
   return decimalValue;
 }
 
-console.log(binaryToDecimal("101"));
-
+//console.log(binaryToDecimal("101"));
+/* 
+function binaryToDec(binary) {
+  let decimal = 0;
+  for (let i = 0; i < binary.length; i++) {
+    if (binary[binary.length - i - 1] === "1") {
+      decimal = decimal + Math.pow(2, i);
+    }
+  }
+  return decimal
+}
+ */
 function decimalToBinary(decimalInput) {
   runningDecimalValue = Number(decimalInput);
   let binaryValue = "";
@@ -34,4 +44,14 @@ function decimalToBinary(decimalInput) {
   }
   return binaryValue;
 }
-console.log(decimalToBinary("5"));
+//console.log(decimalToBinary("5"));
+
+function decToBinary(dec) {
+  let binary = "";
+  while (dec >= 1) {
+    let remainder = dec % 2;
+    binary = remainder + binary;
+    dec = Math.floor(dec / 2);
+  }
+  return binary;
+}
